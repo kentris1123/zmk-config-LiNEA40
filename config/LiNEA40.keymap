@@ -158,7 +158,7 @@
 
         lower_layer {
             bindings = <
-&none      &none     &kp TAB   &kp BSPC   &kp DEL                        &none   &none     &mkp MB3  &none     &none
+&none      &none     &kp TAB   &kp BSPC   &kp DEL                        &none   &none     &tog SCROLL  &none     &none
 &kp PG_UP  &kp HOME  &kp UP    &kp END    &kp ENTER                      &none   &mkp MB1  &mkp MB3  &mkp MB2  &none
 &kp PG_DN  &kp LEFT  &kp DOWN  &kp RIGHT  &kp LC(ESC)                    &none   &none     &none     &none     &none
 &trans     &trans    &trans    &trans     &trans       &trans    &trans  &trans            &trans    &trans    &trans
@@ -189,13 +189,11 @@
 
         scroll_layer {
             bindings = <
-&trans    &kp LC(LG(LEFT_ARROW))  &kp UP_ARROW  &kp LC(LG(RIGHT_ARROW))  &trans                    &kp KP_MULTIPLY  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp KP_PLUS
-&trans    &kp LEFT_ARROW          &kp DOWN      &kp RIGHT_ARROW          &trans                    &kp KP_SLASH     &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp KP_MINUS
-&kp HOME  &kp PAGE_DOWN           &kp END       &kp PAGE_UP              &trans                    &kp UNDER        &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp ENTER
-&trans    &trans                  &trans        &trans                   &trans  &trans    &trans  &kp NUMBER_0                   &kp NUMBER_0  &kp DOT       &kp QUESTION
+&trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans          &trans  &trans  &trans
             >;
-
-            sensor-bindings = <&inc_dec_kp DOWN_ARROW UP_ARROW>;
         };
 
         wireless_layer {
