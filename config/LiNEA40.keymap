@@ -52,6 +52,23 @@
     };
 };
 
+#if defined(CONFIG_ZMK_SPLIT_ROLE_CENTRAL)
+/ {
+    scroll_inertia_lower: scroll_inertia_lower {
+        compatible = "zmk,input-processor-scroll-inertia";
+        #input-processor-cells = <0>;
+
+        /* Vertical iOS-style inertia while LOWER is held. */
+        axis = <1>;
+        layer = <LOWER>;
+
+        /* Match the downstream scroll scaler. */
+        scale = <4>;
+        scale-div = <675>;
+    };
+};
+#endif
+
 &msc_input_listener {
     speed_up {
         layers = <TRI>;
@@ -59,14 +76,18 @@
     };
 };
 
+#if defined(CONFIG_ZMK_SPLIT_ROLE_CENTRAL)
 &trackball_listener {
-    scroller {
-        layers = <LOWER SCROLL>;
+    scroller_lower {
+        layers = <LOWER>;
         input-processors =
-            <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
-            <&zip_xy_to_scroll_mapper>;
+            <&zip_y_scaler (-1) 1>,
+            <&zip_xy_to_scroll_mapper>,
+            <&scroll_inertia_lower>,
+            <&zip_scroll_scaler 4 675>;
     };
 };
+#endif
 
 / {
     combos { compatible = "zmk,combos"; };
