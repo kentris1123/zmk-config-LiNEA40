@@ -158,10 +158,10 @@
 
         lower_layer {
             bindings = <
-&none      &none     &kp TAB   &kp BSPC   &kp DEL                        &none   &none     &mo SCROLL  &none     &none
-&kp PG_UP  &kp HOME  &kp UP    &kp END    &kp ENTER                      &none   &mkp MB1  &mkp MB3    &mkp MB2  &none
-&kp PG_DN  &kp LEFT  &kp DOWN  &kp RIGHT  &kp LC(ESC)                    &none   &none     &none       &none     &none
-&trans     &trans    &trans    &trans     &trans       &trans    &trans  &trans            &trans      &trans    &trans
+&none      &none     &kp TAB   &kp BSPC   &kp DEL                      &none   &none     &mo SCROLL  &none     &none
+&kp PG_UP  &kp HOME  &kp UP    &kp END    &kp ENTER                    &none   &mkp MB1  &mkp MB3    &mkp MB2  &none
+&kp PG_DN  &kp LEFT  &kp DOWN  &kp RIGHT  &kp ESC                      &none   &none     &none       &none     &none
+&trans     &trans    &trans    &trans     &trans     &trans    &trans  &trans            &trans      &trans    &trans
             >;
 
             sensor-bindings = <&re_kp C_VOLUME_DOWN C_VOLUME_UP>;
