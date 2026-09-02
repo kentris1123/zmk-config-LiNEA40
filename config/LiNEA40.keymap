@@ -158,7 +158,7 @@
 
         lower_layer {
             bindings = <
-&none      &none     &kp TAB   &none      &kp DELETE                       &none   &none     &mkp MB3  &none     &none
+&none      &none     &kp TAB   &none      &kp DELETE                       &none   &none     &tog SCROLL  &none     &none
 &kp PG_UP  &kp HOME  &kp UP    &kp END    &kp BACKSPACE                    &none   &mkp MB1  &mkp MB3  &mkp MB2  &none
 &kp PG_DN  &kp LEFT  &kp DOWN  &kp RIGHT  &kp ENTER                        &none   &none     &none     &none     &none
 &trans     &trans    &trans    &trans     &trans         &trans    &trans  &trans            &trans    &trans    &trans
