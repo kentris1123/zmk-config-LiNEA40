@@ -1,4 +1,7 @@
 #include "LiNEA40.dtsi"
+
+#define LOWER 2
+
 &default_transform {
     col-offset = <6>;
 };
@@ -18,6 +21,19 @@
         compatible = "zmk,input-listener";
         device = <&trackball>;
 
+    };
+
+    scroll_inertia_lower: scroll_inertia_lower {
+        compatible = "zmk,input-processor-scroll-inertia";
+        #input-processor-cells = <0>;
+
+        /* Vertical iOS-style inertia while LOWER is held. */
+        axis = <1>;
+        layer = <LOWER>;
+
+        /* Match the downstream scroll scaler. */
+        scale = <4>;
+        scale-div = <675>;
     };
 };
 
@@ -66,4 +82,13 @@
 &trackball_listener {
     status = "okay";
     device = <&trackball>;
+
+    scroller_lower {
+        layers = <LOWER>;
+        input-processors =
+            <&zip_y_scaler (-1) 1>,
+            <&zip_xy_to_scroll_mapper>,
+            <&scroll_inertia_lower>,
+            <&zip_scroll_scaler 4 675>;
+    };
 };
