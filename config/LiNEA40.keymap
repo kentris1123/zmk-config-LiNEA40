@@ -137,10 +137,10 @@
 
         default_layer {
             bindings = <
-&kp Q            &kp W                  &kp E           &kp R      &kp T                           &kp Y  &kp U  &kp I           &kp O         &kp P
-&kp A            &kp S                  &kp D           &kp F      &kp G                           &kp H  &kp J  &kp K           &kp L         &kp SEMI
-&kp Z            &kp X                  &kp C           &kp V      &kp B                           &kp N  &kp M  &kp COMMA       &kp PERIOD    &kp FSLH
-&mt LCTRL GRAVE  &mt LEFT_CONTROL RBKT  &mt LGUI MINUS  &kp SPACE  &mo 2  &kp LSHIFT    &kp RSHFT  &mo 3         &mt RGUI EQUAL  &mt RALT SQT  &mt RCTRL LBKT
+&kp Q            &kp W          &kp E           &kp R      &kp T                           &kp Y  &kp U  &kp I           &kp O         &kp P
+&kp A            &kp S          &kp D           &kp F      &kp G                           &kp H  &kp J  &kp K           &kp L         &kp SEMI
+&kp Z            &kp X          &kp C           &kp V      &kp B                           &kp N  &kp M  &kp COMMA       &kp PERIOD    &kp FSLH
+&mt LCTRL GRAVE  &mt LALT RBKT  &mt LGUI MINUS  &kp SPACE  &mo 2  &kp LSHIFT    &kp RSHFT  &mo 3         &mt RGUI EQUAL  &mt RALT SQT  &mt RCTRL LBKT
             >;
 
             sensor-bindings = <&mouse_scrl SCRL_DOWN SCRL_UP>;
